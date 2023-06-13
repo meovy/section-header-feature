@@ -65,3 +65,37 @@
 .now-ui-icons.business_chart-pie-36:before {
   content: "\ea1f";
 }
+
+.now-ui-icons.ui-2_chat-round:before {
+  content: "\ea20";
+}
+
+.now-ui-icons.design-2_ruler-pencil:before {
+  content: "\ea48";
+}
+
+.now-ui-icons.files_paper:before {
+  content: "\ea43";
+}
+
+.now-ui-icons.ui-2_settings-90:before {
+  content: "\ea4b";
+}
+
+.now-ui-icons.shopping_box:before {
+  content: "\ea11";
+}
+
+.headers-section, .features-section {
+  height: 100vh;
+}
+
+.headers-section {
+  position: relative;
+  top: 100vh;
+}
+
+.features-section {
+  position: relative;
+  top: 200vh;
+}
