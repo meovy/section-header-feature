@@ -25,11 +25,12 @@ function NavBar() {
               caret
               color="default"
               nav
-              onClick={(e) => e.preventDefault()}>
+              onClick={(e) => e.preventDefault()}
+              className="dropdown-btn">
               <i className="now-ui-icons files_paper mr-1"></i>
-              <p>Sections</p>
+              <p className="text">Sections</p>
             </DropdownToggle>
-            <DropdownMenu>
+            <DropdownMenu right>
               <DropdownItem onClick={() => scrollToElement("headers")}>
                 <i className="now-ui-icons shopping_box mr-1"></i>
                 Headers
