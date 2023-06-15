@@ -1,20 +1,19 @@
 import React from "react";
 import Header from "./Header";
+import CarouselSection from "../Carousel";
 
 const Headers = () => {
   const headers = [
-    { index: 0, style: { classes: 'bg-img-1' } },
-    { index: 1, style: { classes: 'bg-img-2' } },
-    { index: 2, style: { classes: 'bg-img-3 bg-img-3-2 bg-img-3-3'} }
-  ]
+    { index: 0, style: { classes: "bg-img-1" } },
+    { index: 1, style: { classes: "bg-img-2" } },
+  ];
   return (
     <>
-      <div id="headers" className="headers-section">
-        Headers
-      </div>
+      <div id="headers" className="headers-section" />
       {headers.map(({ index, style }) => (
-        <Header key={index} index={index} style={style}/>
+        <Header key={index} index={index} style={style} />
       ))}
+      <CarouselSection />
     </>
   );
 };
