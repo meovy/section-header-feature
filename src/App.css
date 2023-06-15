@@ -14,13 +14,21 @@
   font-size: 16px;
 }
 
+/* --------------------------------
+margin
+-------------------------------- */
+
+.mr-1 {
+  margin-right: 4px;
+}
+
 /*------------------------
 	base class definition
 -------------------------*/
 .now-ui-icons {
   display: inline-block;
   font: normal normal normal 14px/1 "Nucleo Outline";
-  font-size: inherit;
+  font-size: 16px;
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -90,7 +98,7 @@
 }
 
 .nav-link.dropdown-btn .text {
-  margin: 1em 0 1em 0.5em;
+  margin: 0;
   line-height: 1.8em;
   font-size: 1em;
   font-weight: 400;
