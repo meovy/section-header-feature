@@ -30,7 +30,7 @@ function NavBar() {
               <i className="now-ui-icons files_paper mr-1"></i>
               <p className="text">Sections</p>
             </DropdownToggle>
-            <DropdownMenu right>
+            <DropdownMenu end>
               <DropdownItem onClick={() => scrollToElement("headers")}>
                 <i className="now-ui-icons shopping_box mr-1"></i>
                 Headers

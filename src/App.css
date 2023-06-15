@@ -75,9 +75,29 @@ margin
   top: 100vh;
 }
 
-.features-section {
-  position: relative;
-  top: 200vh;
+.header-item, .feature-item {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.bg-img-1 {
+  background-image: url("./assets/images/header1.jpg");
+  background-size: cover;
+}
+
+.bg-img-2 {
+  background-image: url("./assets/images/header2.jpg");
+  background-size: cover;
+}
+
+.bg-img-3 {
+  background-image: url("./assets/images/header3.jpg");
+  background-size: cover;
+}
+
+.feature-bg-img {
+  background-image: url("./assets/images/feature.jpg");
+  background-size: cover;
 }
 
 .navbar .dropdown-btn {

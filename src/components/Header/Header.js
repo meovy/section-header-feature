@@ -1,8 +1,9 @@
 import React from "react";
 
-const Header = ({ index }) => {
+const Header = ({ index, style }) => {
   return (
-    <div>Header {index}</div>
+    <div className={`header-item ${style.classes}`}>
+    </div>
   );
 };
 export default Header;
