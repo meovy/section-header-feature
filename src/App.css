@@ -317,6 +317,10 @@ margin
   width: 3.6rem;
 }
 
+.btn-icon.btn-neutral.btn.btn-link.btn-lg:hover {
+  color: #f96332!important;
+}
+
 .mr-3 {
   margin-right: 1rem!important;
 }
