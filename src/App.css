@@ -296,6 +296,12 @@ margin
 .text-right {
   text-align: right !important;
 }
+.text-center {
+  text-align: center !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
 .ml-auto {
   margin-left: auto !important;
 }

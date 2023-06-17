@@ -5,8 +5,8 @@ import CarouselSection from "../Carousel";
 const Headers = () => {
   const headers = [
     {
-      index: 0,
-      style: { classes: "bg-img-1" },
+      id: 1,
+      style: { bgImage: "bg-img-1", containerClass: 'ml-auto text-right' },
       title: "History of surfing",
       description: `The riding of waves has likely existed since humans began swimming
     in the ocean. In this sense, bodysurfing is the oldest type of
@@ -15,8 +15,8 @@ const Headers = () => {
     tabs: ['Home', 'About Us', 'Contact Us']
     },
     {
-      index: 1,
-      style: { classes: "bg-img-2" },
+      id: 2,
+      style: { bgImage: "bg-img-2", containerClass: 'ml-auto mr-auto text-center' },
       title: "You should be here!",
       description: `5,000 capacity venue, holding some of the latest technology lighting with a 24 colour
     laser system Amnesia is one of the islands most legendary clubs.`,
@@ -25,11 +25,11 @@ const Headers = () => {
   ];
   return (
     <div id="headers" className="headers-section">
-      {headers.map(({ index, style, title, description, tabs }) => (
+      {headers.map(({ id, style, title, description, tabs }) => (
         <Header
-          key={index}
+          key={id}
           style={style}
-          data={{ title, description }}
+          data={{ id, title, description }}
           tabs={tabs}
         />
       ))}
