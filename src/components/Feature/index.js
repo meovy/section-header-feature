@@ -9,12 +9,11 @@ const Features = () => {
   ];
 
   return (
-    <>
-      <div id="features" className="features-section" />
+    <div id="features" className="features-section">
       {features.map(({ index, style }) => (
         <Feature key={index} index={index} style={style} />
       ))}
-    </>
+    </div>
   );
 };
 export default Features;

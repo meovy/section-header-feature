@@ -17,7 +17,7 @@ function NavBar() {
     }
   };
   return (
-    <Navbar className="fixed-top nav-bar-section" expand="lg">
+    <Navbar className="fixed-top nav-bar-section" color="white" expand="lg">
       <Container>
         <Nav navbar>
           <UncontrolledDropdown nav>
