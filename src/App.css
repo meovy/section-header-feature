@@ -306,10 +306,6 @@ margin
   margin-left: auto !important;
 }
 
-.btn-neutral.btn-link {
-  color: #fff;
-}
-
 .btn.btn-info.btn-lg {
   color: #fff;
   font-size: 1em;
@@ -317,16 +313,89 @@ margin
   padding: 15px 48px;
 }
 
-.a.btn-icon.btn-lg {
+.btn-icon.btn-lg {
   height: 3.6rem;
   min-width: 3.6rem;
   width: 3.6rem;
 }
 
-.btn-icon.btn-neutral.btn.btn-link.btn-lg:hover {
+.btn-icon.btn-icon.btn-transparent.btn-lg {
+  color: #fff;
+}
+
+.btn-icon.btn-transparent.btn-lg:hover {
   color: #f96332!important;
 }
 
 .mr-3 {
   margin-right: 1rem!important;
+}
+
+.card {
+  border: 0;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  background-color: transparent;
+  border: 1px solid hsla(0,0%,100%,.5);
+  border-radius: 30px;
+  color: #fff;
+  height: auto;
+  line-height: normal;
+  font-size: 0.8571em;
+  -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);}
+
+.form-control:focus {
+  background-color: transparent;
+  border: 1px solid #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 !important;
+  color: #fff;
+}
+.btn-round {
+  border-width: 1px;
+  border-radius: 30px!important;
+}
+
+.btn-block, .btn-block:hover {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+.card-form-horizontal .btn, .card-form-horizontal .form-group, .card-form-horizontal .input-group {
+  margin: 0;
+}
+
+.card-plain {
+  background: transparent;
+  box-shadow: none;
+}
+.card-plain .card-body {
+  padding-left: 5px;
+  padding-right: 5px;
 }

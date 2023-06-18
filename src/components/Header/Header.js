@@ -1,6 +1,8 @@
 import React from "react";
-import { Container } from "reactstrap";
+import { Col, Container } from "reactstrap";
 import TransparentNavBar from "../NavBar/TransparentNavBar";
+import Buttons from "./Buttons";
+import FormHeader from "./Form";
 
 const Header = ({ style, data, tabs }) => {
   return (
@@ -9,33 +11,13 @@ const Header = ({ style, data, tabs }) => {
         <div className={`page-header-image ${style.bgImage}`}></div>
         <TransparentNavBar tabs={tabs} />
         <Container>
-          <div className={`col-md-7 ${style.containerClass}`}>
+          <Col md={7} className={style.containerClass}>
             <h1 className="title">{data.title}</h1>
             <h4 className="description">{data.description}</h4>
             <br />
-            {data.id === 1 && (
-              <div className="buttons">
-                <a
-                  href="#pablo"
-                  className="btn-icon btn-neutral btn btn-link btn-lg">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="#pablo"
-                  className="btn-icon btn-neutral btn btn-link btn-lg">
-                  <i className="fab fa-facebook-square"></i>
-                </a>
-                <a
-                  href="#pablo"
-                  className="btn-icon btn-neutral btn btn-link btn-lg">
-                  <i className="fab fa-get-pocket"></i>
-                </a>
-                <a href="#pablo" className="mr-3 btn btn-info btn-lg">
-                  Read More
-                </a>
-              </div>
-            )}
-          </div>
+            {data.id === 1 && <Buttons />}
+          </Col>
+          {data.id === 2 && <FormHeader />}
         </Container>
       </div>
     </>
