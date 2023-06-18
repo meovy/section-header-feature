@@ -1,4 +1,7 @@
 import Buttons from "../components/Header/Buttons";
+import Action from "../components/Header/Carousel/Action";
+import Connect from "../components/Header/Carousel/Connect";
+import Youtube from "../components/Header/Carousel/Youtube";
 import FormHeader from "../components/Header/Form";
 
 export const list = [
@@ -11,7 +14,8 @@ export const list = [
   wave-catching. Standing up on what is now called a surfboard is a
   relatively recent innovation developed by the Polynesians.`,
     tabs: ["Home", "About Us", "Contact Us"],
-    component: <Buttons/>
+    component: <Buttons />,
+    componentPosition: "bottom-right",
   },
   {
     id: 2,
@@ -23,7 +27,8 @@ export const list = [
     description: `5,000 capacity venue, holding some of the latest technology lighting with a 24 colour
   laser system Amnesia is one of the islands most legendary clubs.`,
     tabs: ["Home", "About Us", "Products", "Contact Us"],
-    component: <FormHeader />
+    component: <FormHeader />,
+    componentPosition: "bottom-center",
   },
   {
     id: 3,
@@ -39,7 +44,8 @@ export const list = [
         description: `On the Run Tour: Beyoncé and Jay Z is a 2014 concert special which documents the September 12 and 13, 2014, shows of American singers`,
         tabs: ["Home", "About Us", "Contact Us"],
         notIcon: true,
-        component: <div>1</div>
+        component: <Youtube embedId="rmfmdKOLzVI?rel=0&controls=0&showinfo=0" />,
+        componentPosition: "left"
       },
       {
         id: 2,
@@ -51,7 +57,8 @@ export const list = [
         description: `The islands of Malta and Gozo are brilliant for a family holiday, packed with fun places to visit whatever your children’s ages. The islands’ small size means everywhere is within easy reach.`,
         tabs: ["Home", "About Us", "Contact Us"],
         notIcon: true,
-        component: <div>2</div>
+        component: <Connect />,
+        componentPosition: "bottom-center"
       },
       {
         id: 3,
@@ -63,7 +70,8 @@ export const list = [
         description: `According to the National Oceanic and Atmospheric Administration, Ted Scambos, NSIDC lead scientist, puts the potentially record low maximum sea ice extent this year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.`,
         tabs: ["Home", "About Us", "Contact Us"],
         notIcon: true,
-        component: <div>3</div>
+        component: <Action />,
+        componentPosition: "bottom-left"
       },
     ],
   },

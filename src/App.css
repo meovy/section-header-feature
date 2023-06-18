@@ -93,6 +93,14 @@ margin
   content: "\ea62";
 }
 
+.now-ui-icons.files_single-copy-04:before {
+  content: "\ea52";
+}
+
+.now-ui-icons.arrows-1_share-66:before {
+  content: "\ea4c";
+}
+
 .nav-bar-section > .container-fluid > .container {
   display: flex;
   justify-content: flex-end;
@@ -569,4 +577,33 @@ h4.description-2 {
 .feature-item-2 .info .description-2,
 .feature-item-2 .info .description-3 {
   color: #fff;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.buttons .btn-neutral.btn-info {
+  color: #2ca8ff;
+  border: none;
+}
+
+.buttons .btn-neutral,
+.buttons .btn-neutral:hover {
+  background-color: #fff;
+}
+
+.btn-neutral.btn-danger {
+  color: #ff3636;
 }

@@ -4,7 +4,6 @@ import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 import Header from "./Header/Header";
 
 function CarouselSection({ carousels }) {
-  console.log("CarouselSection", carousels)
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
@@ -15,12 +14,14 @@ function CarouselSection({ carousels }) {
   };
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === carousels.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex =
+      activeIndex === carousels.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? carousels.length - 1 : activeIndex - 1;
+    const nextIndex =
+      activeIndex === 0 ? carousels.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
   const goToIndex = (newIndex) => {
@@ -36,22 +37,25 @@ function CarouselSection({ carousels }) {
             activeIndex={activeIndex}
             onClickHandler={goToIndex}
           />
-          {carousels.map((carousel) => {
-            return (
-              <CarouselItem
-                onExiting={onExiting}
-                onExited={onExited}
-                key={carousel.id}>
-                <Header
-                  style={carousel.style}
-                  data={{ id: carousel.id, title: carousel.title, description:carousel.description }}
-                  tabs={carousel.tabs}
-                  notIcon={carousel.notIcon}
-                  component={carousel.component}
-                />
-              </CarouselItem>
-            );
-          })}
+          {carousels.map((carousel) => (
+            <CarouselItem
+              onExiting={onExiting}
+              onExited={onExited}
+              key={carousel.id}>
+              <Header
+                style={carousel.style}
+                data={{
+                  id: carousel.id,
+                  title: carousel.title,
+                  description: carousel.description,
+                  component: carousel.component,
+                  componentPosition: carousel.componentPosition,
+                }}
+                tabs={carousel.tabs}
+                notIcon={carousel.notIcon}
+              />
+            </CarouselItem>
+          ))}
           <a
             className="carousel-control-prev"
             data-slide="prev"

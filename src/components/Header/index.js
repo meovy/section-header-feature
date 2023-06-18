@@ -12,12 +12,12 @@ const Headers = () => {
 
   return (
     <div id="headers" className="headers-section">
-      {list.map(({ id, style, title, description, tabs, isCarousel, carousels, component }) => (
+      {list.map(({ id, style, title, description, tabs, isCarousel, carousels, component, componentPosition }) => (
         <div key={id}>
           {!isCarousel && (
             <Header
               style={style}
-              data={{ id, title, description, component }}
+              data={{ id, title, description, component, componentPosition }}
               tabs={tabs}
             />
           )}
