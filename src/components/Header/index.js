@@ -1,39 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import CarouselSection from "../Carousel";
+import { list as headerData } from "../../constants/header";
 
 const Headers = () => {
-  const headers = [
-    {
-      id: 1,
-      style: { bgImage: "bg-img-1", containerClass: 'ml-auto text-right' },
-      title: "History of surfing",
-      description: `The riding of waves has likely existed since humans began swimming
-    in the ocean. In this sense, bodysurfing is the oldest type of
-    wave-catching. Standing up on what is now called a surfboard is a
-    relatively recent innovation developed by the Polynesians.`,
-    tabs: ['Home', 'About Us', 'Contact Us']
-    },
-    {
-      id: 2,
-      style: { bgImage: "bg-img-2", containerClass: 'ml-auto mr-auto text-center' },
-      title: "You should be here!",
-      description: `5,000 capacity venue, holding some of the latest technology lighting with a 24 colour
-    laser system Amnesia is one of the islands most legendary clubs.`,
-    tabs: ['Home', 'About Us', 'Products', 'Contact Us']
-    },
-  ];
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setList(headerData);
+  }, []);
+
   return (
     <div id="headers" className="headers-section">
-      {headers.map(({ id, style, title, description, tabs }) => (
-        <Header
-          key={id}
-          style={style}
-          data={{ id, title, description }}
-          tabs={tabs}
-        />
+      {list.map(({ id, style, title, description, tabs, isCarousel, carousels, component }) => (
+        <div key={id}>
+          {!isCarousel && (
+            <Header
+              style={style}
+              data={{ id, title, description, component }}
+              tabs={tabs}
+            />
+          )}
+          {isCarousel && <CarouselSection carousels={carousels} />}
+        </div>
       ))}
-      <CarouselSection />
     </div>
   );
 };

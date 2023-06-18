@@ -1,27 +1,10 @@
 import React from "react";
 
-import {
-  Carousel,
-  CarouselItem,
-  CarouselIndicators,
-} from "reactstrap";
+import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
+import Header from "./Header/Header";
 
-const items = [
-  {
-    src: require("../assets/images/header3.jpg"),
-    altText: "Carousel 1",
-  },
-  {
-    src: require("../assets/images/header3-2.jpg"),
-    altText: "Carousel 2",
-  },
-  {
-    src: require("../assets/images/header3-3.jpg"),
-    altText: "Carousel 3",
-  },
-];
-
-function CarouselSection() {
+function CarouselSection({ carousels }) {
+  console.log("CarouselSection", carousels)
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
@@ -32,12 +15,12 @@ function CarouselSection() {
   };
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === carousels.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? carousels.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
   const goToIndex = (newIndex) => {
@@ -49,17 +32,23 @@ function CarouselSection() {
       <div className="header-item" id="carousel">
         <Carousel activeIndex={activeIndex} next={next} previous={previous}>
           <CarouselIndicators
-            items={items}
+            items={carousels}
             activeIndex={activeIndex}
             onClickHandler={goToIndex}
           />
-          {items.map((item) => {
+          {carousels.map((carousel) => {
             return (
               <CarouselItem
                 onExiting={onExiting}
                 onExited={onExited}
-                key={item.src}>
-                <img src={item.src} alt={item.altText} width="100%" />
+                key={carousel.id}>
+                <Header
+                  style={carousel.style}
+                  data={{ id: carousel.id, title: carousel.title, description:carousel.description }}
+                  tabs={carousel.tabs}
+                  notIcon={carousel.notIcon}
+                  component={carousel.component}
+                />
               </CarouselItem>
             );
           })}

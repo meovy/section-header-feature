@@ -23,7 +23,7 @@ export default function FormHeader() {
                     defaultValue=""
                     placeholder="Full Name"
                     type="text"
-                    size="lg"
+                    bsSize="lg"
                   />
                 </FormGroup>
               </Col>
@@ -33,7 +33,7 @@ export default function FormHeader() {
                     defaultValue=""
                     placeholder="Your Email"
                     type="email"
-                    size="lg"
+                    bsSize="lg"
                   />
                 </FormGroup>
               </Col>
@@ -43,7 +43,7 @@ export default function FormHeader() {
                     defaultValue=""
                     placeholder="Password"
                     type="password"
-                    size="lg"
+                    bsSize="lg"
                   />
                 </FormGroup>
               </Col>

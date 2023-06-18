@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Feature from "./Feature";
+import { list as featureData } from "../../constants/feature";
 
 const Features = () => {
-  const features = [
-    { index: 0, style: {} },
-    { index: 1, style: { classes: "feature-bg-img" } },
-    { index: 2, style: {} },
-  ];
+  const [ list, setList ] = useState([]);
+
+  useEffect(()=>{
+    setList(featureData);
+  }, [])
 
   return (
     <div id="features" className="features-section">
-      {features.map(({ index, style }) => (
-        <Feature key={index} index={index} style={style} />
+      {list.map((feature) => (
+        <Feature key={feature.id} data={feature} />
       ))}
     </div>
   );

@@ -8,7 +8,7 @@ import {
   Container,
 } from "reactstrap";
 
-export default function TransparentNavBar({ tabs }) {
+export default function TransparentNavBar({ tabs, notIcon }) {
   return (
     <Navbar className="navbar-transparent" expand="lg">
       <Container>
@@ -16,7 +16,10 @@ export default function TransparentNavBar({ tabs }) {
           <div className="col navbar-translate">
             <NavbarBrand href="#">Creative tim</NavbarBrand>
           </div>
-          <div className="col-6 display-flex justify-content-center">
+          <div
+            className={`col-6 display-flex ${
+              notIcon ? "justify-content-end" : "justify-content-center"
+            }`}>
             <Nav navbar>
               {tabs.map((tab) => (
                 <NavItem key={tab}>
@@ -25,25 +28,27 @@ export default function TransparentNavBar({ tabs }) {
               ))}
             </Nav>
           </div>
-          <div className="col display-flex justify-content-end">
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="#twitter">
-                  <i className="fab fa-twitter"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#facebook">
-                  <i className="fab fa-facebook-square"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#instagram">
-                  <i className="fab fa-instagram"></i>
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </div>
+          {!notIcon && (
+            <div className="col display-flex justify-content-end">
+              <Nav navbar>
+                <NavItem>
+                  <NavLink href="#twitter">
+                    <i className="fab fa-twitter"></i>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#facebook">
+                    <i className="fab fa-facebook-square"></i>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#instagram">
+                    <i className="fab fa-instagram"></i>
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </div>
+          )}
         </div>
       </Container>
     </Navbar>
